@@ -6,7 +6,9 @@ from models.base_model import BaseModel, Base
 
 
 class User(BaseModel, Base):
-    ''' User table in class '''
+    ''' User table in class
+    User have a relationship one to many orders.
+    '''
     __tablename__ = "users"
     username = Column(String(60), nullable=False)
     passwd = Column(String(60), nullable=False)
