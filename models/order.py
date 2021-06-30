@@ -7,7 +7,9 @@ from datetime import datetime
 
 
 class Order(BaseModel, Base):
-    ''' Table Order for the orders. '''
+    ''' Table Order for the orders.
+    The order-users is a many to one relationship, many orders to one user.
+    '''
     __tablename__ = "orders"
     date = Column(DateTime, default=datetime.utcnow)
     total = Column(String(60), nullable=False)
